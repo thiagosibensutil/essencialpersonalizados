@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - Essencial Personalizados</title>
+    <style>
+        body { 
+            font-family: sans-serif; 
+            text-align: center; 
+            padding: 20px; 
+            background-color: #f4f4f4; 
+        }
+        .caixa-pagamento { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            display: inline-block; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+            max-width: 400px;
+            width: 90%;
+        }
+        .btn-pix { background-color: #32BCAD; color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; margin: 10px; width: 100%; }
+        .btn-cartao { background-color: #2f6598; color: white; padding: 15px 30px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; margin: 10px; width: 100%; }
+        
+        /* Estilo do botão de frete que faltava */
+        .btn-frete { 
+            background-color: #666; 
+            color: white; 
+            padding: 8px 15px; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            margin-top: 5px;
+        }
+        
+        .frete-secao { 
+            margin-top: 30px; 
+            padding-top: 20px; 
+            border-top: 1px solid #eee; 
+        }
+        input#cep { 
+            padding: 8px; 
+            border-radius: 5px; 
+            border: 1px solid #ccc; 
+            width: 60%; 
+        }
+        a { color: #2f6598; text-decoration: none; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <div class="caixa-pagamento">
+        <h2>Finalize sua Compra</h2>
+        <p>Escolha como deseja pagar:</p>
+        
+        <button class="btn-pix" onclick="window.location.href='SEU_LINK_PIX_AQUI'">Pagar com PIX</button>
+        <button class="btn-cartao" onclick="window.location.href='SEU_LINK_CARTAO_AQUI'">Pagar com Cartão</button>
+        
+        <div class="frete-secao">
+            <h3>Calcular Frete</h3>
+            <input type="text" id="cep" placeholder="00000-000" maxlength="9">
+            <button onclick="calcularFrete()" class="btn-frete">Calcular</button>
+            <p id="resultado-frete"></p>
+        </div>
+
+        <p><br><a href="index.html">← Voltar para a loja</a></p>
+    </div>
+
+    <script>
+    function calcularFrete() {
+        const cep = document.getElementById('cep').value;
+        const resultado = document.getElementById('resultado-frete');
+
+        // Limpa o formato do CEP para validar apenas números
+        const cepLimpo = cep.replace(/\D/g, '');
+
+        if (cepLimpo.length !== 8) {
+            resultado.innerText = "CEP inválido. Digite 8 números.";
+            resultado.style.color = "red";
+            return;
+        }
+
+        // Simulação de valor de frete
+        let valorFrete = 25.00; 
+        
+        resultado.style.color = "green";
+        resultado.innerHTML = `<strong>Valor do Frete: R$ ${valorFrete.toFixed(2)}</strong><br>
+                               <small>Prazo estimado: 7 a 10 dias úteis.</small>`;
+    }
+    </script>
+
+</body>
+</html>

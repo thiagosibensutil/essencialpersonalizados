@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Carrinho - Essencial Personalizados</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container-carrinho {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        #listaCarrinho {
+            text-align: left;
+            margin: 20px 0;
+            padding: 0;
+        }
+        .item-carrinho {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .btn-finalizar {
+            background-color: #25D366;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .btn-pagamento {
+            background-color: #2f6598;
+            color: white;
+            padding: 10px;
+            display: block;
+            margin-top: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-carrinho">
+        <h2>🛍️ Seu Carrinho</h2>
+        
+        <ul id="listaCarrinho">
+            </ul>
+
+        <button class="btn-finalizar" onclick="finalizarCompra()">
+            Finalizar Pedido via WhatsApp
+        </button>
+
+        <a href="pagamento.html" class="btn-pagamento">Ir para opções de Pagamento/Frete</a>
+        
+        <p><br><a href="index.html" style="color: #666; text-decoration: none;">← Continuar Comprando</a></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Chama a função para mostrar os itens assim que a página abrir
+        window.onload = atualizarCarrinho;
+    </script>
+</body>
+</html>

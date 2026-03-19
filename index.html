@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentes & Personalizados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="#inicio">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="https://wa.me/5541991530405" target="_blank">Contato</a> 
+    </nav>
+</header>
+
+<section id="inicio" class="banner"></section>
+
+<section id="produtos" class="produtos">
+    <h2>Nossos Produtos</h2>
+
+    <div class="grid">
+        <div class="produto">
+            <img src="Imagens/canecaM.jpeg" onclick="abrirModal('Caneca Personalizada', 'Imagens/canecaM.jpeg')" style="cursor: pointer;">
+            <h3>Caneca Personalizada</h3>
+            <p>R$ 29,90</p>
+            <button onclick="adicionarSimples('Caneca Personalizada')">Comprar</button>
+        </div>
+
+        <div class="produto">
+            <img src="Imagens/canecaL.jpeg" onclick="abrirModal('Caneca Personagens', 'Imagens/canecaL.jpeg')" style="cursor: pointer;">
+            <h3>Caneca Personagens</h3>
+            <p>R$ 49,90</p>
+            <button onclick="adicionarSimples('Caneca Personagens')">Comprar</button>
+        </div>
+
+        <div class="produto">
+            <img src="Imagens/canecas.jpeg" onclick="abrirModal('Kit Canecas', 'Imagens/canecas.jpeg')" style="cursor: pointer;">
+            <h3>Kit Canecas</h3>
+            <p>R$ 59,90</p>
+            <button onclick="adicionarSimples('Kit Canecas')">Comprar</button>
+        </div>
+
+        <div class="produto">
+            <img src="Imagens/camiseta.jpg" alt="Camiseta" onclick="abrirModal('Camiseta Personalizada', 'Imagens/camiseta.jpg')" style="cursor: pointer;">
+            <h3>Camiseta Personalizada</h3>
+            <p>R$ 59,90</p>
+            
+            <label style="font-size: 14px; color: #666;">Escolha o tamanho:</label>
+            <select id="tamanho-camisa-1" class="seletor-tamanho">
+                <option value="PP">PP</option>
+                <option value="P">P</option>
+                <option value="M">M</option>
+                <option value="G">G</option>
+                <option value="GG">GG</option>
+            </select>
+
+            <button class="btn-comprar" onclick="adicionarDireto('Camiseta', 'tamanho-camisa-1')">Comprar</button>
+        </div>
+
+        <div class="produto">
+            <img src="Imagens/ALM.jpeg" alt="Almofada 30x30" onclick="abrirModal('Almofada 30x30', 'Imagens/ALM.jpeg')" style="cursor: pointer;"> 
+            <h3>Almofada 30x30</h3>
+            <p>R$ 35,00</p>
+            <button onclick="adicionarSimples('Almofada 30x30')">Comprar</button>
+        </div>
+
+        <div class="produto">
+            <img src="Imagens/almpes.jpg" alt="Almofada de Pescoço" onclick="abrirModal('Almofada de Pescoço', 'Imagens/almpes.jpg')" style="cursor: pointer;">
+            <h3>Almofada de Pescoço</h3>
+            <p>R$ 25,00</p>
+            <button onclick="adicionarSimples('Almofada de Pescoço')">Comprar</button>
+        </div>
+
+        <div class="produto">
+            <img src="Imagens/almpers.jpg" alt="Almofadas Personagens" onclick="abrirModal('Almofada Personagens', 'Imagens/almpers.jpg')" style="cursor: pointer;">
+            <h3>Almofada Personagens</h3>
+            <p>R$ 20,00</p>
+            <button onclick="adicionarSimples('Almofada Personagens')">Comprar</button>
+        </div>
+
+        <div class="produto">
+            <img src="Imagens/masc.jpg" alt="Máscara de Dormir" onclick="abrirModal('Máscara de Dormir', 'Imagens/masc.jpg')" style="cursor: pointer;">
+            <h3>Máscara de Dormir</h3>
+            <p>R$ 20,00</p>
+            <button onclick="adicionarSimples('Máscara de Dormir')">Comprar</button>
+        </div>
+
+        <div class="produto">
+            <img src="Imagens/pantufa.jpg" alt="Pantufa" onclick="abrirModal('Pantufa Personalizada', 'Imagens/pantufa.jpg')" style="cursor: pointer;">
+            <h3>Pantufa Personalizada</h3>
+            <p>R$ 35,00</p>
+            <button onclick="adicionarSimples('Pantufa Personalizada')">Comprar</button>
+        </div>
+
+        <div class="produto">
+            <img src="Imagens/pijamainf.png" alt="Pijama Infantil" onclick="abrirModal('Pijama Infantil', 'Imagens/pijamainf.png')" style="cursor: pointer;">
+            <h3>Pijama Infantil</h3>
+            <p>R$ 65,00</p>
+            <button onclick="adicionarSimples('Pijama Infantil')">Comprar</button>
+        </div>
+
+        <div class="produto">
+            <img src="Imagens/almochaveiro.jpg" alt="Almochaveiro" onclick="abrirModal('Almochaveiro', 'Imagens/almochaveiro.jpg')" style="cursor: pointer;">
+            <h3>Almochaveiro</h3>
+            <p>R$ 3,00</p>
+            <button onclick="adicionarSimples('Almochaveiro')">Comprar</button>
+        </div>
+
+        <div class="produto">
+            <img src="Imagens/acrílico.png" alt="Chaveiro de Acrílico" onclick="abrirModal('Chaveiro de Acrílico', 'Imagens/acrílico.png')" style="cursor: pointer;">
+            <h3>Chaveiro de Acrílico</h3>
+            <p>R$ 12,00</p>
+            <button onclick="adicionarSimples('Chaveiro de Acrílico')">Comprar</button>
+        </div>
+    </div>
+</section>
+
+<div id="modalProduto" class="modal">
+    <div class="modal-conteudo">
+        <span class="fechar" onclick="fecharModal()">&times;</span>
+        <div class="modal-flex">
+            <div class="fotos-vitrine">
+                <img id="fotoPrincipal" src="" alt="Produto Principal" style="width: 100%; max-width: 350px; border-radius: 10px;">
+                
+                <div id="miniaturasContainer" class="miniaturas" style="display: flex; gap: 10px; margin-top: 15px;">
+                </div>
+            </div>
+            
+            
+            <div class="info-produto">
+                <h2 id="modalNome">Nome do Produto</h2>
+                <p id="modalDescricao">Produto personalizado de alta qualidade. Ideal para presentear quem você ama!</p>
+                
+                <button class="btn-comprar-modal" onclick="adicionarDoModal()" style="background: #25D366; color: white; border: none; padding: 15px; width: 100%; cursor: pointer; font-weight: bold; border-radius: 5px; margin-top: 20px;">
+                    Adicionar ao Carrinho
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 Presentes Personalizados</p>
+</footer>
+
+<a href="https://wa.me/5541991530405?text=Olá, quero um orçamento" class="btn-orcamento-flutuante">
+    <span>📝 Orçamento</span>
+</a>
+
+<a href="https://wa.me/5541991530405" class="whatsapp-flutuante">
+    <span>📞 WhatsApp</span>
+</a>
+
+<a href="carrinho.html" onclick="return irParaPagamento(event)" class="carrinho-icon">
+    <span>🛒 Carrinho: </span>
+    <b id="contagem-carrinho">0</b>
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
